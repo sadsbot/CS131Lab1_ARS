@@ -30,7 +30,7 @@ public class NonPlayerCharacter extends GameCharacter{
 	 * @param intelligenceType
 	 * @param active
 	 */
-	public NonPlayerCharacter(String id, String personality, String intelligenceType, boolean active) {
+	public NonPlayerCharacter(String id, String personality, boolean active, String intelligenceType) {
 		super (id, personality);
 		setIntelligenceType(intelligenceType);
 		setActive(active);
