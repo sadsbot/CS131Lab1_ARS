@@ -59,6 +59,29 @@ public class BasketballTeam extends SportsTeam{
 	public double[] getStats(){
 		return(new double[]{super.getWinPercentage(), fieldGoalPercentage(), freeThrowPercentage()});
 	}//end getStats
+	
+	/**
+	 * Sets relevant statistics.
+	 *
+	 * @param wins
+	 * @param losses
+	 * @param fieldGoals
+	 * @param fieldGoalsAttempted
+	 * @param freeThrows
+	 * @param freeThrowsAttempted
+	 */
+	public void setStats(int wins, int losses, int fieldGoals, int fieldGoalsAttempted, int freeThrows, int freeThrowsAttempted) {
+		super.setWins(wins);
+		super.setLosses(losses);
+		if(fieldGoals < 0) this.fieldGoals = 0;
+		else this.fieldGoals = fieldGoals;
+		if(fieldGoalsAttempted < 0) this.freeThrowsAttempted = 0;
+		else this.fieldGoalsAttempted = fieldGoalsAttempted;
+		if(freeThrows < 0) this.freeThrows = 0;
+		else this.freeThrows = freeThrows;
+		if(freeThrowsAttempted < 0) this.freeThrowsAttempted = 0;
+		else this.freeThrowsAttempted = freeThrowsAttempted;
+	}//end setStats
 
 	/**
 	 * @return the fieldGoals
@@ -71,7 +94,8 @@ public class BasketballTeam extends SportsTeam{
 	 * @param fieldGoals the fieldGoals to set
 	 */
 	public void setFieldGoals(int fieldGoals) {
-		this.fieldGoals = fieldGoals;
+		if(fieldGoals < 0) this.fieldGoals = 0;
+		else this.fieldGoals = fieldGoals;
 	}//end setFieldGoals
 
 	/**
@@ -85,7 +109,8 @@ public class BasketballTeam extends SportsTeam{
 	 * @param fieldGoalsAttempted the fieldGoalsAttempted to set
 	 */
 	public void setFieldGoalsAttempted(int fieldGoalsAttempted) {
-		this.fieldGoalsAttempted = fieldGoalsAttempted;
+		if(fieldGoalsAttempted < 0) this.fieldGoalsAttempted = 0;
+		else this.fieldGoalsAttempted = fieldGoalsAttempted;
 	}//end setFieldGoalsAttempted
 
 	/**
@@ -99,7 +124,8 @@ public class BasketballTeam extends SportsTeam{
 	 * @param freeThrows the freeThrows to set
 	 */
 	public void setFreeThrows(int freeThrows) {
-		this.freeThrows = freeThrows;
+		if(freeThrows < 0) this.freeThrows = 0;
+		else this.freeThrows = freeThrows;
 	}//end setFreeThrows
 
 	/**
@@ -113,7 +139,7 @@ public class BasketballTeam extends SportsTeam{
 	 * @param freeThrowsAttempted the freeThrowsAttempted to set
 	 */
 	public void setFreeThrowsAttempted(int freeThrowsAttempted) {
-		this.freeThrowsAttempted = freeThrowsAttempted;
+		if(freeThrowsAttempted < 0) this.freeThrowsAttempted = 0;
+		else this.freeThrowsAttempted = freeThrowsAttempted;
 	}//end setFreeThrowsAttempted
-	
-}
+}//end class BasketballTeam

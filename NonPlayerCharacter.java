@@ -44,7 +44,7 @@ public class NonPlayerCharacter extends GameCharacter{
 	 */
 	public String reportStructure(){
 		StringBuilder sb = new StringBuilder(super.reportStructure());
-		sb.append("Active: "+getActive()+"\n");
+		sb.append("Active: "+isActive()+"\n");
 		sb.append("Intelligence: "+getIntelligenceType()+"\n");
 		sb.append("==================================\n");
 		
@@ -56,7 +56,7 @@ public class NonPlayerCharacter extends GameCharacter{
 	 * @return String
 	 */
 	public String introduce() {
-		return("Hello, my name is " + uniqueID + ".");
+		return("Hello, my name is " + uniqueID);
 	}//end introduce
 	
 	/**
@@ -73,7 +73,7 @@ public class NonPlayerCharacter extends GameCharacter{
 	 * Getter for boolean active.
 	 * @return active
 	 */
-	public boolean getActive() {
+	public boolean isActive() {
 		return(active);
 	}//end getActive
 	
@@ -100,4 +100,4 @@ public class NonPlayerCharacter extends GameCharacter{
 	public void setIntelligenceType(String iType) {
 		intelligenceType = iType;
 	}//end setIntelligenceType
-}//end class
+}//end Class NonPlayerCharacter

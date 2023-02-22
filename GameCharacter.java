@@ -99,5 +99,4 @@ public class GameCharacter {
 	public String toString() {
 		return "GameCharacter [uniqueID=" + uniqueID + ", personality=" + personality + "]";
 	}//end toString
-
-}//end class
+}//end Class GameCharacter
